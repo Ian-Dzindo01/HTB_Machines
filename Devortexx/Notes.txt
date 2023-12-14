@@ -1,0 +1,14 @@
+Found subdomain dev/devorrtex. Found administrator panel inside of this. Both of these using dirsearch and gobuster. Reached Joomla website, gonna try to hack credentials.
+
+Maybe try this now:
+  The attacker exploited a loophole in Joomla and uploaded a PHP file to the images folder.
+
+  The file contained the following SQL statement (in base64 encoded format):
+
+  UPDATE #__users SET username='admin', password='[MD5 value]'
+
+  The PHP file was executed from the attacker’s machine/server using CURL.
+
+  The query ran successfully, and the usernames and passwords for all the users were set to the same value.
+
+
