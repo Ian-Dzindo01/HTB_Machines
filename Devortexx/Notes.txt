@@ -11,4 +11,10 @@ Maybe try this now:
 
   The query ran successfully, and the usernames and passwords for all the users were set to the same value.
 
+Used Joomla version 4.2.6 exploit to obtain login credentials.
+Once inside went to System/System Templates and placed a bash reverse shell into the login.php form. Netcat to have command execution.
 
+Once inside the system, opened the lewis user mysql table and extracted password hashes for lewis and logan.
+
+Managed to crack logan user password using john the ripper. Connected to the target machine with ssh using the password we just obtained. Retrieved user flag.
+Ran sudo -l, seen that we have user privileges on a file named apport-cli. Simple exploit to gain sudo privileges using - CVE-2023-26604.
