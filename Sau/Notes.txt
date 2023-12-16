@@ -1,0 +1,8 @@
+Nmap scan reveals interesting 80 filtered http port. Also port 55555 is open and hosting a service. Might be an interesting way in.
+Request baskets is being used, maybe I can manipulate that. Make a basket to talk to local machine port 80.
+Following the url we see Mailtrail v0.53 being used. Maybe exploitable.
+Found a script, it is in the repo here. Execute script and listen on netcat to get user.
+Sudo -l to see that systemctl can be ran as sudo.
+Couple of exploits for this, but this command is quickest and most effective. Spawn a shell after executing this command using !sh:
+    sudo systemctl status trail.service
+Root flag should be in ~.
