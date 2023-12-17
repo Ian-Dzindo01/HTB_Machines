@@ -1,0 +1,10 @@
+Website has a login form ran on Metabase. We are going to try to exploit that.
+Found exploit for Metabase. Main.py in this folder. Requires setup-token key which can be found in the /api/session/properties file of the website.
+
+Upon running that we are in the system. Cannot find flag so looking for ways to authenticate as higher privileged user. Found them in proc/self/environ.
+
+Used ssh to log on and obtained user flag. Sudo -l does not work. After lookin around for a while I decide to check the system specs.
+
+Turns out to be Ubuntu 22.04.02 which could be vulnerable. We fight a vulnerability exploit.sh which is in this folder. Creator of the script is referenced in the script.
+
+We run that and obtain root.
