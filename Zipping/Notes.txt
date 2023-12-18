@@ -1,0 +1,4 @@
+Inspecting the site we find a couple of interesting findings. /uploads will probably contain any files we upload through the work with us for.
+The assets directory also might be useful. Dirsearch shows a login.php site that could be of use.
+Gobuster vhost enumeration finished. Nothing to see.
+Shopping tab might be interesting too.
