@@ -1,0 +1,9 @@
+Website returns a login form for which the default root password combination is easily found by a simple Google Search.
+Once inside we see a ticket which tells us keepass is being used on the target system.
+We might me able to do a SSRF attack.
+Nope, opening one of the users profiles and editing them gave us the password and we sshed into the system.
+Site warns of a possible XSS attack which could have also been a way in.
+Once inside there is a zip file which upon unzipping provides a KeeDump.dmb file and a passode.kdbx file.
+(CVE-2023-32784) can be used to extract a pass which look an awful lot like a popular Danish dessert name.
+We use that master password on the passcodes.kdbx file to extract a ppk file. We use puttygen to convert the ppk
+file into a id_rsa openssh private key which can than be used to connect to root of machine.
