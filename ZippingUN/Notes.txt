@@ -1,0 +1,11 @@
+Inspecting the site we find a couple of interesting findings. /uploads will probably contain any files we upload through the work with us for.
+The assets directory also might be useful. Dirsearch shows a login.php site that could be of use.
+Gobuster vhost enumeration finished. Nothing to see.
+Shopping tab might be interesting too.
+Site only accepts pdf files. We might be able to put a revshell inside of a pdf file and upload it.
+Ill take some time to learn about the structure of a pdf and writing one from text in order to understand how to put a payload inside.
+Bootstrap-4.3.1 is also being used, maybe a way in.
+Seems that all the vulnerabilities for bootstrap 4.3.1 were fixed and updated.
+Uploading a zip file with a reverse shell or something uncovering the user details is probably our best bet.
+Trying to upload an evil zip file but page keeps saying it needs a .pdf extension.
+I need a zipped up revershe shell inside of a pdf file.

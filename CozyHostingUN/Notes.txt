@@ -1,2 +1,0 @@
-Try most common username pass combinations or XSS attack, because it seems that Bootstrap login might be vulnerable to that.
-Enumerate website using Gobuster or Dirb
