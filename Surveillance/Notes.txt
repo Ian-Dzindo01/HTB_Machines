@@ -1,1 +1,6 @@
 Trying dirsearch, dirb and gobuster for enumeration and vhost discovery.
+Found and /adming page running a login form built on Craft Cms. Found an exploit for the forgot your password section:
+https://packetstormsecurity.com/files/166989/Craft-CMS-3.7.36-Password-Reset-Poisoning-Attack.html.
+Going to try and get this to work. I will need a email or username of one of the users on the system.
+This attack will require the user to click on a link that is sent to their email. Not sure if this is going to work. We try another vector of attack.
+By checking the source of the site we see that it is running craftcms version 4.4.14
