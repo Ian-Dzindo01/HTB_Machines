@@ -4,4 +4,5 @@ https://packetstormsecurity.com/files/166989/Craft-CMS-3.7.36-Password-Reset-Poi
 Going to try and get this to work. I will need a email or username of one of the users on the system.
 This attack will require the user to click on a link that is sent to their email. Not sure if this is going to work. We try another vector of attack.
 By checking the source of the site we see that it is running craftcms version 4.4.14 Found a good python script that will do the job(CVE-2023-41892)
-
+Ran the script, got shell. Looked around, found something interesting in html/craft/storage/backups. Transported the database backup to local machine.
+Extracted a hash and a username matthew. Used hashcat to crack the hash and logged in with ssh. Got user flag. Moving on to root.
