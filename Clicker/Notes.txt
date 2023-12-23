@@ -1,0 +1,6 @@
+Rpcbind on port 111. Couple of nfs opened, might be able to use those.
+Cannot find ypbind running on here.
+Seems like there are no interesting subfolders on the site, after enumeration with dirb and dirsearch.
+Moving on with the nfs exploit https://resources.infosecinstitute.com/topics/penetration-testing/exploiting-nfs-share/
+/mnt/backups seems to be mountable
+Got access to /mnt/backup folder.
