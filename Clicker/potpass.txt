@@ -1,0 +1,2 @@
+clicker_db_password
+db_name="clicker";

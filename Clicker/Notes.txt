@@ -4,3 +4,8 @@ Seems like there are no interesting subfolders on the site, after enumeration wi
 Moving on with the nfs exploit https://resources.infosecinstitute.com/topics/penetration-testing/exploiting-nfs-share/
 /mnt/backups seems to be mountable
 Got access to /mnt/backup folder.
+Found credentials for the database. Dont seem to do much. After lookin around the code found an interesting comment in the save.php file.
+A line that prevents malicious activity by controlling the role parameter. Might be able to send a malicious get request with role=admin using Burp.
+Doesnt work. Looked around the web found out that a CRLF attack might be suitable here.
+Sent a payload &role%0a=Admin, which got me the administrative panel. Woho.
+
