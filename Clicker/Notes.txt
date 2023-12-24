@@ -8,4 +8,6 @@ Found credentials for the database. Dont seem to do much. After lookin around th
 A line that prevents malicious activity by controlling the role parameter. Might be able to send a malicious get request with role=admin using Burp.
 Doesnt work. Looked around the web found out that a CRLF attack might be suitable here.
 Sent a payload &role%0a=Admin, which got me the administrative panel. Woho.
-
+Found this file top_players_dfimwtvj.txt.Dont know what to do with it.
+Changed the extension to .php using Burp, trying to upload a reverse shell to it. Have to url encode it first.
+Server timeout. Need to repeat everything again. Have problems with bash shell.
