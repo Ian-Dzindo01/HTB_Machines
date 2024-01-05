@@ -1,0 +1,74 @@
+# Nmap 7.80 scan initiated Fri Jan  5 12:18:42 2024 as: nmap -sC -sV -Pn- -oN ip 10.10.11.236
+Nmap scan report for 10.10.11.236
+Host is up (0.15s latency).
+Not shown: 987 filtered ports
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain?
+80/tcp   open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Manager
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-01-05 18:18:59Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: manager.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=dc01.manager.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:dc01.manager.htb
+| Not valid before: 2023-07-30T13:51:28
+|_Not valid after:  2024-07-29T13:51:28
+|_ssl-date: 2024-01-05T18:22:02+00:00; +7h00m00s from scanner time.
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: manager.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=dc01.manager.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:dc01.manager.htb
+| Not valid before: 2023-07-30T13:51:28
+|_Not valid after:  2024-07-29T13:51:28
+|_ssl-date: 2024-01-05T18:22:03+00:00; +7h00m00s from scanner time.
+1433/tcp open  ms-sql-s      Microsoft SQL Server  15.00.2000.00
+| ms-sql-ntlm-info: 
+|   Target_Name: MANAGER
+|   NetBIOS_Domain_Name: MANAGER
+|   NetBIOS_Computer_Name: DC01
+|   DNS_Domain_Name: manager.htb
+|   DNS_Computer_Name: dc01.manager.htb
+|   DNS_Tree_Name: manager.htb
+|_  Product_Version: 10.0.17763
+| ssl-cert: Subject: commonName=SSL_Self_Signed_Fallback
+| Not valid before: 2024-01-05T16:13:01
+|_Not valid after:  2054-01-05T16:13:01
+|_ssl-date: 2024-01-05T18:22:02+00:00; +7h00m00s from scanner time.
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: manager.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=dc01.manager.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:dc01.manager.htb
+| Not valid before: 2023-07-30T13:51:28
+|_Not valid after:  2024-07-29T13:51:28
+|_ssl-date: 2024-01-05T18:22:03+00:00; +7h00m00s from scanner time.
+3269/tcp open  ssl/ldap      Microsoft Windows Active Directory LDAP (Domain: manager.htb0., Site: Default-First-Site-Name)
+| ssl-cert: Subject: commonName=dc01.manager.htb
+| Subject Alternative Name: othername: 1.3.6.1.4.1.311.25.1::<unsupported>, DNS:dc01.manager.htb
+| Not valid before: 2023-07-30T13:51:28
+|_Not valid after:  2024-07-29T13:51:28
+|_ssl-date: 2024-01-05T18:22:03+00:00; +7h00m00s from scanner time.
+Service Info: Host: DC01; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 6h59m59s, deviation: 0s, median: 6h59m59s
+| ms-sql-info: 
+|   10.10.11.236:1433: 
+|     Version: 
+|       name: Microsoft SQL Server 
+|       number: 15.00.2000.00
+|       Product: Microsoft SQL Server 
+|_    TCP port: 1433
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2024-01-05T18:21:22
+|_  start_date: N/A
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Jan  5 12:22:04 2024 -- 1 IP address (1 host up) scanned in 202.19 seconds
